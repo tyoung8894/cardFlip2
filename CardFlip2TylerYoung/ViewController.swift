@@ -34,18 +34,18 @@ class ViewController: UIViewController {
     var back = true
     var f = 0
     
-    @IBAction func flipCard(sender: UITapGestureRecognizer) {
+    @IBAction func flipCard(_ sender: UITapGestureRecognizer) {
         let card = sender.view! as! UIImageView
         if back == true{
             card.image = UIImage(named: "front")
             back = false
             f = f + 1
-            flips.text = "flips \(f)"
+            flips.text = "Flips: \(f)"
         } else{
             card.image = UIImage(named: "back")
             back = true
             f = f + 1
-            flips.text = "flips \(f)"
+            flips.text = "Flips: \(f)"
             
         }
         
